@@ -45,7 +45,7 @@ app.put('/api/newcomment', (req, res) => {
     [],
     {
       "$push": {
-        "comments": {"text": req.body.comment, "userId": req.body.userId}
+        "comments": {"text": req.body.comment, "user_id": req.body.user_id}
       }},
       {upsert: true}
 
